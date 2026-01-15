@@ -1,0 +1,22 @@
+{
+    "Group": "HyMods",
+    "Name": "HyGames",
+    "Version": "0.0.0",
+    "Description": "HyTale Server Games",
+    "Authors": [
+        {
+            "Name": "Stevie"
+        }
+    ],
+    "Website": "hymods.org",
+    "ServerVersion": "*",
+    "Dependencies": {
+        
+    },
+    "OptionalDependencies": {
+        
+    },
+    "DisabledByDefault": false,
+    "Main": "org.hymods.hygames.HyGamesPlugin",
+    "IncludesAssetPack": true
+}

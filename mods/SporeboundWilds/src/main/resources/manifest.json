@@ -1,0 +1,22 @@
+{
+    "Group": "HyMods",
+    "Name": "Sporebound Wilds",
+    "Version": "0.0.0",
+    "Description": "It's a mushroom!",
+    "Authors": [
+        {
+            "Name": "Stevie"
+        }
+    ],
+    "Website": "hymods.org",
+    "ServerVersion": "*",
+    "Dependencies": {
+        
+    },
+    "OptionalDependencies": {
+        
+    },
+    "DisabledByDefault": false,
+    "Main": "org.hymods.sporebound_wilds.SporeboundWildsPlugin",
+    "IncludesAssetPack": true
+}

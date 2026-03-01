@@ -2,6 +2,7 @@ package org.hymods.hygames.core.effects;
 
 import com.hypixel.hytale.server.core.entity.entities.Player;
 import org.hymods.hygames.core.IEffect;
+import org.hymods.hygames.core.IPassiveEffect;
 import org.hymods.hygames.core.algorithms.Knapsack;
 import org.hymods.hygames.core.runtime.GameContext;
 
@@ -13,20 +14,27 @@ import java.util.List;
 
 public class LobbyEffect implements IEffect {
     private final LobbyHub lobbyHub;
+    private final IPassiveEffect lobbyEffect;
     private final IEffect effect;
 
-    public LobbyEffect(LobbyHub lobbyHub, IEffect effect) {
+    public LobbyEffect(
+            LobbyHub lobbyHub,
+            IPassiveEffect lobbyEffect,
+            IEffect effect) {
         this.lobbyHub = lobbyHub;
         this.effect = effect;
+        this.lobbyEffect = lobbyEffect;
     }
 
     @Override
     public void run(GameContext context) {
-        lobbyHub.join(context, effect);
+        lobbyHub.join(context, lobbyEffect, effect);
+        lobbyEffect.join(context);
     }
 
     @Override
     public void cancel(GameContext context) {
+        lobbyEffect.dispose(context);
         effect.cancel(context);
         lobbyHub.leave(context);
     }
@@ -39,7 +47,10 @@ public class LobbyEffect implements IEffect {
             this.playerCount = playerCount;
         }
 
-        public void join(GameContext gameContext, IEffect effect) {
+        public void join(
+                GameContext gameContext,
+                IPassiveEffect lobbyEffect,
+                IEffect effect) {
             synchronized (gameContexts) {
                 gameContexts.add(gameContext);
 
@@ -50,6 +61,7 @@ public class LobbyEffect implements IEffect {
                 var players = new ArrayList<Player>(playerCount);
                 for (var matchupContext : matchup) {
                     players.addAll(Arrays.stream(matchupContext.players()).toList());
+                    lobbyEffect.dispose(matchupContext);
                 }
 
                 var context = new GameContext(players.toArray(Player[]::new));

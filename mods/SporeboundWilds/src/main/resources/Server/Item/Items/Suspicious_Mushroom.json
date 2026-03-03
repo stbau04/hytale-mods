@@ -16,7 +16,7 @@
     "Gathering": {
       "Breaking": {
         "GatherType": "Plant",
-        "ItemId": "suspicious_mushroom"
+        "ItemId": "Suspicious_Mushroom"
       }
     },
     "BlockParticleSetId": "Dust",

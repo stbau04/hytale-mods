@@ -1,0 +1,34 @@
+{
+  "Type": "NoiseRange",
+  "Biomes": [
+    {
+      "Biome": "Sporebound_Forest"
+    }
+  ],
+  "DefaultBiome": "Basic",
+  "DefaultTransitionDistance": 32,
+  "MaxBiomeEdgeDistance": 32,
+  "Density": {
+    "Type": "Imported",
+    "Name": "Biome-Map"
+  },
+  "Framework": [
+    {
+      "Type": "DecimalConstants",
+      "Entries": [
+        {
+          "Name": "Base",
+          "Value": 100
+        },
+        {
+          "Name": "Water",
+          "Value": 100
+        },
+        {
+          "Name": "Bedrock",
+          "Value": 0
+        }
+      ]
+    }
+  ]
+}

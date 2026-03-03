@@ -1,0 +1,51 @@
+{
+  "TranslationProperties": {
+    "Name": "items.suspicious_mushroom.name",
+    "Description": "items.suspicious_mushroom.description"
+  },
+  "Id": "Suspicious_Mushroom",
+  "MaxStack": 100,
+  "Categories": [
+    "Blocks.Plants"
+  ],
+  "PlayerAnimationsId": "Block",
+  "BlockType": {
+    "Material": "Empty",
+    "DrawType": "Model",
+    "Group": "Plant",
+    "Gathering": {
+      "Breaking": {
+        "GatherType": "Plant",
+        "ItemId": "suspicious_mushroom"
+      }
+    },
+    "BlockParticleSetId": "Dust",
+    "ParticleColor": "#e1003b",
+    "BlockSoundSetId": "Mushroom",
+    "CustomModel": "Blocks/Suspicious_Mushroom.blockymodel",
+    "CustomModelTexture": [
+      {
+        "Texture": "BlockTextures/Suspicious_Mushroom.png"
+      }
+    ],
+    "RandomRotation": "YawStep90",
+    "VariantRotation": "All",
+    "FlipType": "Symmetric",
+    "RotationYawPlacementOffset": "Ninety",
+    "InteractionHitboxType": "Suspicious_Mushroom",
+    "HitboxType": "Suspicious_Mushroom"
+  },
+  "Icon": "Icons/ItemsGenerated/Suspicious_Mushroom.png",
+  "IconProperties": {
+    "Scale": 0.58823,
+    "Rotation": [
+      22.5,
+      45,
+      22.5
+    ],
+    "Translation": [
+      0,
+      -13.5
+    ]
+  }
+}

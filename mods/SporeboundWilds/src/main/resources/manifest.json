@@ -1,20 +1,20 @@
 {
-    "Group": "HytaleModding",
-    "Name": "ExamplePlugin",
+    "Group": "HyMods",
+    "Name": "Sporebound Wilds",
     "Version": "0.0.0",
-    "Description": "Description of your plugin",
+    "Description": "Does this mushroom look kinda weird?",
     "Authors": [
         {
-            "Name": "Your Name",
-            "Email": "your.email@example.com",
-            "Url": "https://your-website.com"
+            "Name": "Stephan Bauer",
+            "Email": "st.bauer04@gmail.com",
+            "Url": "https://hymods.org"
         }
     ],
-    "Website": "https://your-plugin-website.com",
+    "Website": "https://hymods.org",
     "DisabledByDefault": false,
     "IncludesAssetPack": false,
     "Dependencies": {},
     "OptionalDependencies": {},
     "ServerVersion": "*",
-    "Main": "dev.hytalemodding.ExamplePlugin"
+    "Main": "org.hymods.SporeboundWildsPlugin"
 }

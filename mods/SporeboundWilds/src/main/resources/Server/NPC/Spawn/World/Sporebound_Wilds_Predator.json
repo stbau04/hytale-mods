@@ -1,0 +1,16 @@
+{
+  "Environments": [
+    "Env_Sporebound_Wilds"
+  ],
+  "NPCs": [
+    {
+      "Weight": 5,
+      "SpawnBlockSet": "Soil",
+      "Id": "Bear_Grizzly"
+    }
+  ],
+  "DayTimeRange": [
+    6,
+    18
+  ]
+}

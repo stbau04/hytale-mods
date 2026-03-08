@@ -1,0 +1,69 @@
+{
+  "Stars": "Sky/Stars.png",
+  "Moons": [ ],
+  "Clouds": [ ],
+  "SkyTopColors": [
+    {
+      "Hour": 7,
+      "Color": "#271b07"
+    }
+  ],
+  "SkyBottomColors": [
+    {
+      "Hour": 7,
+      "Color": "#271b07"
+    }
+  ],
+  "SkySunsetColors": [
+    {
+      "Hour": 7,
+      "Color": "#271b07"
+    }
+  ],
+  "FogColors": [
+    {
+      "Hour": 7,
+      "Color": "#271b07"
+    }
+  ],
+  "SunColors": [
+    {
+      "Hour": 7,
+      "Color": "#271b07"
+    }
+  ],
+  "MoonColors": [
+    {
+      "Hour": 7,
+      "Color": "#271b07"
+    }
+  ],
+  "MoonGlowColors": [
+    {
+      "Hour": 7,
+      "Color": "#271b07"
+    }
+  ],
+  "SunScales": [
+    {
+      "Hour": 7,
+      "Value": 0
+    }
+  ],
+  "MoonScales": [
+    {
+      "Hour": 7,
+      "Value": 0
+    }
+  ],
+  "SunGlowColors": [
+    {
+      "Hour": 7,
+      "Color": "#271b07"
+    }
+  ],
+  "FogDistance": [
+    -180,
+    118
+  ]
+}

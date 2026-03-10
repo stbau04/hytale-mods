@@ -165,19 +165,52 @@
 									}]
 							},
 							"Inputs":	[{
-									"$NodeId":	"SumDensityNode-256e5796-c02d-4d84-8bac-0e71554610f2",
+									"$NodeId":	"SumDensityNode-27f652ca-dc6d-4fa1-9354-257c25dc8ec0",
 									"Type":	"Sum",
 									"Skip":	false,
 									"Inputs":	[{
-											"$NodeId":	"ImportedDensityNode-0fb958ef-ee7f-40b3-baa1-6cedf5cb91ff",
-											"Type":	"Imported",
+											"$NodeId":	"CurveMapper.Density-fc5b7959-0818-4308-94a0-3ae0bb7773c2",
+											"Type":	"CurveMapper",
 											"Skip":	false,
-											"Name":	"Sporebound_Forest_Overground_Baseline"
+											"Curve":	{
+												"$NodeId":	"ManualCurve-efc72958-61e6-40a7-b185-3221712dd5e8",
+												"Type":	"Manual",
+												"Points":	[{
+														"$NodeId":	"CurvePoint-8187a252-e7ed-468f-9074-e5848fdd0921",
+														"In":	-10,
+														"Out":	1
+													}, {
+														"$NodeId":	"CurvePoint-bab0fae0-6817-4740-ad99-ca475d60fc41",
+														"In":	50,
+														"Out":	-1
+													}]
+											},
+											"Inputs":	[{
+													"$NodeId":	"SumDensityNode-babc2380-1f76-491c-852e-6ea03db6b621",
+													"Type":	"Sum",
+													"Skip":	false,
+													"Inputs":	[{
+															"$NodeId":	"BaseHeight.Density-a8b091aa-80ca-497f-b4b3-2585cdb4dff6",
+															"Type":	"BaseHeight",
+															"Skip":	false,
+															"BaseHeightName":	"Base",
+															"Distance":	true
+														}, {
+															"$NodeId":	"ConstantDensityNode-3263afb6-171f-4097-911c-dcc9ccb829b7",
+															"Type":	"Constant",
+															"Skip":	false,
+															"Value":	20
+														}]
+												}]
 										}, {
-											"$NodeId":	"ImportedDensityNode-da594e7a-4961-4718-ba54-aa6cf96da378",
-											"Type":	"Imported",
+											"$NodeId":	"SimplexNoise2DDensityNode-9f5470a6-fa72-4f51-b050-e7e1b2777409",
+											"Type":	"SimplexNoise2D",
 											"Skip":	false,
-											"Name":	"Sporebound_Forest_Overground_Hills_Big"
+											"Lacunarity":	2,
+											"Persistence":	0.5,
+											"Octaves":	2,
+											"Scale":	400,
+											"Seed":	"Sporebound_Forest_Overground_Hills_Big"
 										}]
 								}]
 						}, {
@@ -709,6 +742,7 @@
 										"Prop":	{
 											"$NodeId":	"Prefab.Prop-1ec5b672-d952-4241-9701-ab8ca06285d5",
 											"Type":	"Prefab",
+											"ExportAs":	"Sporebound_Wilds_Cave_Mushrooms\n\t\"$NodeId\":\t\"Imported.Scanner\",\n\t\"$Position\":\t{\n\t\t\"$x\":\t15486,\n\t\t\"$y\":\t24025\n\t},\n\t\"Type\":\t\"Imported\",\n\t\"Skip\":\tfalse,\n\t\"Name\":\t\"Sporebound_Forest_Overground_Ponds\"\n}\n\t\"$NodeId\":\t\"Imported.Scanner\",\n\t\"$Position\":\t{\n\t\t\"$x\":\t13649,\n\t\t\"$y\":\t8484\n\t},\n\t\"Type\":\t\"Imported\",\n\t\"Skip\":\tfalse,\n\t\"Name\":\t\"Sporebound_Wilds_Cave_Mushrooms_Height\\n\\t\\\"$NodeId\\\":\\t\\\"Imported.Scanner\\\",\\n\\t\\\"$Position\\\":\\t{\\n\\t\\t\\\"$x\\\":\\t15486,\\n\\t\\t\\\"$y\\\":\\t24025\\n\\t},\\n\\t\\\"Type\\\":\\t\\\"Imported\\\",\\n\\t\\\"Skip\\\":\\tfalse,\\n\\t\\\"Name\\\":\\t\\\"Sporebound_Forest_Overground_Ponds\\\"\\n}\"\n}",
 											"Skip":	false,
 											"WeightedPrefabPaths":	[{
 													"$NodeId":	"WeightedPath.Prefab.Prop-da01312d-9722-423d-ba81-9d9a6aa8fb4b",
@@ -735,6 +769,7 @@
 															"Wall":	{
 																"$NodeId":	"BlockSet.Pattern-eb59bcf7-ce65-4c0b-9e92-bb8de4222278",
 																"Type":	"BlockSet",
+																"ExportAs":	"Sporebound_Wilds_Caves_Mushrooms_Base",
 																"Skip":	false,
 																"BlockSet":	{
 																	"$NodeId":	"BlockSet.BlockMask-15ab567b-bdd4-4d4a-9f37-1728dd4e273a",
@@ -753,6 +788,7 @@
 															"Origin":	{
 																"$NodeId":	"BlockType.Pattern-e2694f54-8843-4b10-9e77-a46876214529",
 																"Type":	"BlockType",
+																"ExportAs":	"Sporebound_Wilds_Caves_Mushrooms_Air",
 																"Skip":	false,
 																"Material":	{
 																	"$NodeId":	"Material-a7da5d70-763d-4247-995e-3f5d46b85739",
@@ -769,31 +805,28 @@
 													"Skip":	false,
 													"Max":	{
 														"$NodeId":	"Point3D-8a26c990-dfde-4784-99ff-181d1b825feb",
-														"X":	3,
+														"X":	0,
 														"Y":	0,
 														"Z":	0
 													},
 													"Min":	{
 														"$NodeId":	"Point3D-de1f18a2-c787-47f1-b5ca-1e6dcfa87d63",
-														"X":	0,
+														"X":	3,
 														"Y":	4,
 														"Z":	0
 													},
 													"SubPattern":	{
-														"$NodeId":	"BlockType.Pattern-37ec47c0-dd61-4ff4-a90e-adb887e3ac80",
-														"Type":	"BlockType",
+														"$NodeId":	"Imported.Pattern-7b81979d-0d37-4e34-ac90-86be0829899a",
+														"Type":	"Imported",
 														"Skip":	false,
-														"Material":	{
-															"$NodeId":	"Material-f7b41655-021f-417d-aa02-f130393a5998",
-															"Solid":	"Empty",
-															"SolidBottomUp":	false
-														}
+														"Name":	"Sporebound_Wilds_Caves_Mushrooms_Air"
 													}
 												}]
 										},
 										"Scanner":	{
 											"$NodeId":	"Linear.Scanner-98202105-8df0-40a9-a784-9f882fbbcfbf",
 											"Type":	"Linear",
+											"ExportAs":	"Sporebound_Wilds_Cave_Mushrooms_Height\n\t\"$NodeId\":\t\"Imported.Scanner\",\n\t\"$Position\":\t{\n\t\t\"$x\":\t15486,\n\t\t\"$y\":\t24025\n\t},\n\t\"Type\":\t\"Imported\",\n\t\"Skip\":\tfalse,\n\t\"Name\":\t\"Sporebound_Forest_Overground_Ponds\"\n}",
 											"Skip":	false,
 											"Axis":	"Y",
 											"AscendingOrder":	false,
@@ -817,18 +850,10 @@
 											"Type":	"StaticRotator",
 											"Skip":	false,
 											"Prop":	{
-												"$NodeId":	"Prefab.Prop-1479f9b4-eacc-462c-a30e-bb93edf5210a",
-												"Type":	"Prefab",
-												"Skip":	false,
-												"WeightedPrefabPaths":	[{
-														"$NodeId":	"WeightedPath.Prefab.Prop-29940421-76fd-4d1a-843f-a8f8eb9b686e",
-														"Path":	"Sporebound_Wilds_Caves_Mushrooms_Wall",
-														"Weight":	1
-													}],
-												"LegacyPath":	false,
-												"LoadEntities":	true,
-												"MoldingDirection":	"NONE",
-												"MoldingChildren":	false
+												"$NodeId":	"Imported.Prop-a04bb0c0-b30f-443d-988c-e4cf70a3d8e8",
+												"Type":	"Imported",
+												"Name":	"Sporebound_Wilds_Cave_Mushrooms\n\t\"$NodeId\":\t\"Imported.Scanner\",\n\t\"$Position\":\t{\n\t\t\"$x\":\t15486,\n\t\t\"$y\":\t24025\n\t},\n\t\"Type\":\t\"Imported\",\n\t\"Skip\":\tfalse,\n\t\"Name\":\t\"Sporebound_Forest_Overground_Ponds\"\n}\n\t\"$NodeId\":\t\"Imported.Scanner\",\n\t\"$Position\":\t{\n\t\t\"$x\":\t13649,\n\t\t\"$y\":\t8484\n\t},\n\t\"Type\":\t\"Imported\",\n\t\"Skip\":\tfalse,\n\t\"Name\":\t\"Sporebound_Wilds_Cave_Mushrooms_Height\\n\\t\\\"$NodeId\\\":\\t\\\"Imported.Scanner\\\",\\n\\t\\\"$Position\\\":\\t{\\n\\t\\t\\\"$x\\\":\\t15486,\\n\\t\\t\\\"$y\\\":\\t24025\\n\\t},\\n\\t\\\"Type\\\":\\t\\\"Imported\\\",\\n\\t\\\"Skip\\\":\\tfalse,\\n\\t\\\"Name\\\":\\t\\\"Sporebound_Forest_Overground_Ponds\\\"\\n}\"\n}",
+												"Skip":	false
 											},
 											"Rotation":	{
 												"$NodeId":	"OrthogonalRotation-bc5bcfbb-4dfd-48da-9491-e00c277c9ad8",
@@ -842,36 +867,20 @@
 											"Type":	"And",
 											"Skip":	false,
 											"Patterns":	[{
-													"$NodeId":	"Wall.Pattern-1ecb7df6-ad8a-4746-99a4-c7a4becf6515",
+													"$NodeId":	"Wall.Pattern-992a9080-5394-4527-88b5-fbe2547a9057",
 													"Type":	"Wall",
 													"Skip":	false,
 													"Wall":	{
-														"$NodeId":	"BlockSet.Pattern-3620a3b6-7db5-41b4-8883-760753982333",
-														"Type":	"BlockSet",
+														"$NodeId":	"Imported.Pattern-d5f53ec1-ce78-436a-89af-c512eb508aaf",
+														"Type":	"Imported",
 														"Skip":	false,
-														"BlockSet":	{
-															"$NodeId":	"BlockSet.BlockMask-f50f3bca-0df5-4b90-86b2-c9ad8250fa1a",
-															"Inclusive":	true,
-															"Materials":	[{
-																	"$NodeId":	"Material-2605da05-f790-435a-9900-28f4ba2e60cf",
-																	"Solid":	"Soil_Mud_Dry",
-																	"SolidBottomUp":	false
-																}, {
-																	"$NodeId":	"Material-3c399fbf-5fac-4db9-9c79-cbd322ce8933",
-																	"Solid":	"Soil_Mud",
-																	"SolidBottomUp":	false
-																}]
-														}
+														"Name":	"Sporebound_Wilds_Caves_Mushrooms_Base"
 													},
 													"Origin":	{
-														"$NodeId":	"BlockType.Pattern-f2ef64c0-d818-4e17-92d9-6fdbc836400c",
-														"Type":	"BlockType",
+														"$NodeId":	"Imported.Pattern-a8559c4f-91f3-44d5-b074-34ce781bdca3",
+														"Type":	"Imported",
 														"Skip":	false,
-														"Material":	{
-															"$NodeId":	"Material-07cba0d7-7c7c-428a-8679-1ce1758de6a3",
-															"Solid":	"Empty",
-															"SolidBottomUp":	false
-														}
+														"Name":	"Sporebound_Wilds_Caves_Mushrooms_Air"
 													},
 													"Directions":	["E"],
 													"RequireAllDirections":	false
@@ -881,7 +890,7 @@
 													"Skip":	false,
 													"Max":	{
 														"$NodeId":	"Point3D-01c9dad6-52e0-4d44-88c2-41a0cc45458a",
-														"X":	3,
+														"X":	-3,
 														"Y":	0,
 														"Z":	0
 													},
@@ -892,28 +901,18 @@
 														"Z":	0
 													},
 													"SubPattern":	{
-														"$NodeId":	"BlockType.Pattern-9cb42ec4-cec4-407f-a731-34a33e9bcd79",
-														"Type":	"BlockType",
+														"$NodeId":	"Imported.Pattern-3db4c554-1525-4996-9bd6-d3d3555e9d1e",
+														"Type":	"Imported",
 														"Skip":	false,
-														"Material":	{
-															"$NodeId":	"Material-1bfe3cb9-6051-4e6e-95ac-c3732b061b19",
-															"Solid":	"Empty",
-															"SolidBottomUp":	false
-														}
+														"Name":	"Sporebound_Wilds_Caves_Mushrooms_Air"
 													}
 												}]
 										},
 										"Scanner":	{
-											"$NodeId":	"Linear.Scanner-98af05fa-b92b-464c-894e-04b46590a8c6",
-											"Type":	"Linear",
+											"$NodeId":	"Imported.Scanner-beff14bb-00fd-41fd-a0d3-f29e20e0f111",
+											"Type":	"Imported",
 											"Skip":	false,
-											"Axis":	"Y",
-											"AscendingOrder":	false,
-											"Range":	{
-												"$NodeId":	"Integer.Range-d1fb77a4-4d24-4dcf-88ea-107407693e30",
-												"MinInclusive":	0,
-												"MaxExclusive":	20
-											}
+											"Name":	"Sporebound_Wilds_Cave_Mushrooms_Height\n\t\"$NodeId\":\t\"Imported.Scanner\",\n\t\"$Position\":\t{\n\t\t\"$x\":\t15486,\n\t\t\"$y\":\t24025\n\t},\n\t\"Type\":\t\"Imported\",\n\t\"Skip\":\tfalse,\n\t\"Name\":\t\"Sporebound_Forest_Overground_Ponds\"\n}"
 										}
 									},
 									"Weight":	0.5
@@ -929,18 +928,10 @@
 											"Type":	"StaticRotator",
 											"Skip":	false,
 											"Prop":	{
-												"$NodeId":	"Prefab.Prop-2e685ba3-1185-4cb9-911a-5ffafcb19263",
-												"Type":	"Prefab",
-												"Skip":	false,
-												"WeightedPrefabPaths":	[{
-														"$NodeId":	"WeightedPath.Prefab.Prop-9f147d7b-1af6-4c38-b1cf-093b5c543269",
-														"Path":	"Sporebound_Wilds_Caves_Mushrooms_Wall",
-														"Weight":	1
-													}],
-												"LegacyPath":	false,
-												"LoadEntities":	true,
-												"MoldingDirection":	"NONE",
-												"MoldingChildren":	false
+												"$NodeId":	"Imported.Prop-6714c0a7-ad1f-4739-aea0-8d938ca2c0db",
+												"Type":	"Imported",
+												"Name":	"Sporebound_Wilds_Cave_Mushrooms\n\t\"$NodeId\":\t\"Imported.Scanner\",\n\t\"$Position\":\t{\n\t\t\"$x\":\t15486,\n\t\t\"$y\":\t24025\n\t},\n\t\"Type\":\t\"Imported\",\n\t\"Skip\":\tfalse,\n\t\"Name\":\t\"Sporebound_Forest_Overground_Ponds\"\n}\n\t\"$NodeId\":\t\"Imported.Scanner\",\n\t\"$Position\":\t{\n\t\t\"$x\":\t13649,\n\t\t\"$y\":\t8484\n\t},\n\t\"Type\":\t\"Imported\",\n\t\"Skip\":\tfalse,\n\t\"Name\":\t\"Sporebound_Wilds_Cave_Mushrooms_Height\\n\\t\\\"$NodeId\\\":\\t\\\"Imported.Scanner\\\",\\n\\t\\\"$Position\\\":\\t{\\n\\t\\t\\\"$x\\\":\\t15486,\\n\\t\\t\\\"$y\\\":\\t24025\\n\\t},\\n\\t\\\"Type\\\":\\t\\\"Imported\\\",\\n\\t\\\"Skip\\\":\\tfalse,\\n\\t\\\"Name\\\":\\t\\\"Sporebound_Forest_Overground_Ponds\\\"\\n}\"\n}",
+												"Skip":	false
 											},
 											"Rotation":	{
 												"$NodeId":	"OrthogonalRotation-9d6de01e-cc8e-4b6a-be38-38500056cdef",
@@ -954,36 +945,20 @@
 											"Type":	"And",
 											"Skip":	false,
 											"Patterns":	[{
-													"$NodeId":	"Wall.Pattern-1984f9cb-d9c3-4263-b646-8ec110dafaca",
+													"$NodeId":	"Wall.Pattern-b5d09015-5ff8-40aa-8d26-e80f7c19482f",
 													"Type":	"Wall",
 													"Skip":	false,
 													"Wall":	{
-														"$NodeId":	"BlockSet.Pattern-dd9c491c-46af-4343-9972-48710f00f477",
-														"Type":	"BlockSet",
+														"$NodeId":	"Imported.Pattern-aa3a5d07-883d-49f1-9108-f66909f1f33e",
+														"Type":	"Imported",
 														"Skip":	false,
-														"BlockSet":	{
-															"$NodeId":	"BlockSet.BlockMask-d0446031-b801-46c5-8ed8-4c4126949226",
-															"Inclusive":	true,
-															"Materials":	[{
-																	"$NodeId":	"Material-b6f85d58-9acf-4819-90e7-b04c5d44301b",
-																	"Solid":	"Soil_Mud_Dry",
-																	"SolidBottomUp":	false
-																}, {
-																	"$NodeId":	"Material-503e547c-930e-46d3-9ee2-05350ae55ccc",
-																	"Solid":	"Soil_Mud",
-																	"SolidBottomUp":	false
-																}]
-														}
+														"Name":	"Sporebound_Wilds_Caves_Mushrooms_Base"
 													},
 													"Origin":	{
-														"$NodeId":	"BlockType.Pattern-137704f1-0859-4848-b5c6-60f7d71ad244",
-														"Type":	"BlockType",
+														"$NodeId":	"Imported.Pattern-2ab2707e-cff9-46d0-8bfc-b541274926fa",
+														"Type":	"Imported",
 														"Skip":	false,
-														"Material":	{
-															"$NodeId":	"Material-5e641cb5-e16a-4e31-a763-8209caad345a",
-															"Solid":	"Empty",
-															"SolidBottomUp":	false
-														}
+														"Name":	"Sporebound_Wilds_Caves_Mushrooms_Air"
 													},
 													"Directions":	["N"],
 													"RequireAllDirections":	false
@@ -993,7 +968,7 @@
 													"Skip":	false,
 													"Max":	{
 														"$NodeId":	"Point3D-51e04df4-9627-4735-bead-8ecdd84e27b2",
-														"X":	3,
+														"X":	0,
 														"Y":	0,
 														"Z":	0
 													},
@@ -1001,31 +976,21 @@
 														"$NodeId":	"Point3D-96b54180-b7cd-4554-9e72-4faacf96fa22",
 														"X":	0,
 														"Y":	4,
-														"Z":	0
+														"Z":	3
 													},
 													"SubPattern":	{
-														"$NodeId":	"BlockType.Pattern-f6f1462a-68b8-41b1-8fe7-44ad12861145",
-														"Type":	"BlockType",
+														"$NodeId":	"Imported.Pattern-681118b6-980b-4a5e-a60e-49d687effef1",
+														"Type":	"Imported",
 														"Skip":	false,
-														"Material":	{
-															"$NodeId":	"Material-648bc5c6-6568-4797-9bff-34150d0ac6ac",
-															"Solid":	"Empty",
-															"SolidBottomUp":	false
-														}
+														"Name":	"Sporebound_Wilds_Caves_Mushrooms_Air"
 													}
 												}]
 										},
 										"Scanner":	{
-											"$NodeId":	"Linear.Scanner-2bf4db94-8156-4d43-affc-b5f9604c0530",
-											"Type":	"Linear",
+											"$NodeId":	"Imported.Scanner-81193dd9-eeac-45d6-9bc1-6ebcedcc2666",
+											"Type":	"Imported",
 											"Skip":	false,
-											"Axis":	"Y",
-											"AscendingOrder":	false,
-											"Range":	{
-												"$NodeId":	"Integer.Range-6ec6c4e4-a6ad-4469-b060-5007f4ac505b",
-												"MinInclusive":	0,
-												"MaxExclusive":	20
-											}
+											"Name":	"Sporebound_Wilds_Cave_Mushrooms_Height\n\t\"$NodeId\":\t\"Imported.Scanner\",\n\t\"$Position\":\t{\n\t\t\"$x\":\t15486,\n\t\t\"$y\":\t24025\n\t},\n\t\"Type\":\t\"Imported\",\n\t\"Skip\":\tfalse,\n\t\"Name\":\t\"Sporebound_Forest_Overground_Ponds\"\n}"
 										}
 									},
 									"Weight":	0.5
@@ -1041,18 +1006,10 @@
 											"Type":	"StaticRotator",
 											"Skip":	false,
 											"Prop":	{
-												"$NodeId":	"Prefab.Prop-d05cb1e3-1122-4897-b8be-5c2566298589",
-												"Type":	"Prefab",
-												"Skip":	false,
-												"WeightedPrefabPaths":	[{
-														"$NodeId":	"WeightedPath.Prefab.Prop-4f313858-0599-4dd1-9a32-c8b3bbf84cc2",
-														"Path":	"Sporebound_Wilds_Caves_Mushrooms_Wall",
-														"Weight":	1
-													}],
-												"LegacyPath":	false,
-												"LoadEntities":	true,
-												"MoldingDirection":	"NONE",
-												"MoldingChildren":	false
+												"$NodeId":	"Imported.Prop-5c9d7b62-a071-4bbf-8bb2-771e8398d170",
+												"Type":	"Imported",
+												"Name":	"Sporebound_Wilds_Cave_Mushrooms\n\t\"$NodeId\":\t\"Imported.Scanner\",\n\t\"$Position\":\t{\n\t\t\"$x\":\t15486,\n\t\t\"$y\":\t24025\n\t},\n\t\"Type\":\t\"Imported\",\n\t\"Skip\":\tfalse,\n\t\"Name\":\t\"Sporebound_Forest_Overground_Ponds\"\n}\n\t\"$NodeId\":\t\"Imported.Scanner\",\n\t\"$Position\":\t{\n\t\t\"$x\":\t13649,\n\t\t\"$y\":\t8484\n\t},\n\t\"Type\":\t\"Imported\",\n\t\"Skip\":\tfalse,\n\t\"Name\":\t\"Sporebound_Wilds_Cave_Mushrooms_Height\\n\\t\\\"$NodeId\\\":\\t\\\"Imported.Scanner\\\",\\n\\t\\\"$Position\\\":\\t{\\n\\t\\t\\\"$x\\\":\\t15486,\\n\\t\\t\\\"$y\\\":\\t24025\\n\\t},\\n\\t\\\"Type\\\":\\t\\\"Imported\\\",\\n\\t\\\"Skip\\\":\\tfalse,\\n\\t\\\"Name\\\":\\t\\\"Sporebound_Forest_Overground_Ponds\\\"\\n}\"\n}",
+												"Skip":	false
 											},
 											"Rotation":	{
 												"$NodeId":	"OrthogonalRotation-a115acc7-a801-4bff-b018-221561b394d9",
@@ -1070,32 +1027,16 @@
 													"Type":	"Wall",
 													"Skip":	false,
 													"Wall":	{
-														"$NodeId":	"BlockSet.Pattern-8a3ecee1-e1f0-4731-8c2d-9a232c8d6a6c",
-														"Type":	"BlockSet",
+														"$NodeId":	"Imported.Pattern-9e631319-d206-4c14-855d-84e1c79d9c59",
+														"Type":	"Imported",
 														"Skip":	false,
-														"BlockSet":	{
-															"$NodeId":	"BlockSet.BlockMask-4caf9f4e-b722-4c58-92ec-a7c02aa6ac39",
-															"Inclusive":	true,
-															"Materials":	[{
-																	"$NodeId":	"Material-bcb6b985-500f-438d-a439-bca5f07f533c",
-																	"Solid":	"Soil_Mud_Dry",
-																	"SolidBottomUp":	false
-																}, {
-																	"$NodeId":	"Material-c9ce1e12-55bb-4977-b84f-448addb87fc6",
-																	"Solid":	"Soil_Mud",
-																	"SolidBottomUp":	false
-																}]
-														}
+														"Name":	"Sporebound_Wilds_Caves_Mushrooms_Base"
 													},
 													"Origin":	{
-														"$NodeId":	"BlockType.Pattern-0da473ce-48b5-4255-860c-2afe8ab17406",
-														"Type":	"BlockType",
+														"$NodeId":	"Imported.Pattern-b583e7c6-8c3f-4ed7-9bcd-26b6c7cabe75",
+														"Type":	"Imported",
 														"Skip":	false,
-														"Material":	{
-															"$NodeId":	"Material-d0488c1f-05f9-4332-8b27-9e4ef7652782",
-															"Solid":	"Empty",
-															"SolidBottomUp":	false
-														}
+														"Name":	"Sporebound_Wilds_Caves_Mushrooms_Air"
 													},
 													"Directions":	["S"],
 													"RequireAllDirections":	false
@@ -1105,9 +1046,9 @@
 													"Skip":	false,
 													"Max":	{
 														"$NodeId":	"Point3D-6a870fff-c396-4983-92c3-5337e2535414",
-														"X":	3,
+														"X":	0,
 														"Y":	0,
-														"Z":	0
+														"Z":	-3
 													},
 													"Min":	{
 														"$NodeId":	"Point3D-82ee0fe1-a1f4-48c8-9098-0af446280866",
@@ -1116,28 +1057,18 @@
 														"Z":	0
 													},
 													"SubPattern":	{
-														"$NodeId":	"BlockType.Pattern-299ae40b-fa6f-42fd-a7af-ad3cf41b55f7",
-														"Type":	"BlockType",
+														"$NodeId":	"Imported.Pattern-cf198420-07dd-41ee-ad30-b19e1c560c5a",
+														"Type":	"Imported",
 														"Skip":	false,
-														"Material":	{
-															"$NodeId":	"Material-81c6a7cb-c437-49eb-8653-341c86698295",
-															"Solid":	"Empty",
-															"SolidBottomUp":	false
-														}
+														"Name":	"Sporebound_Wilds_Caves_Mushrooms_Air"
 													}
 												}]
 										},
 										"Scanner":	{
-											"$NodeId":	"Linear.Scanner-9c829a99-e071-4a15-95b2-16373ead1461",
-											"Type":	"Linear",
+											"$NodeId":	"Imported.Scanner-1f14e77b-b383-4657-9368-c5986251687a",
+											"Type":	"Imported",
 											"Skip":	false,
-											"Axis":	"Y",
-											"AscendingOrder":	false,
-											"Range":	{
-												"$NodeId":	"Integer.Range-4920ef52-73f5-4bde-9103-16e60a67cf1b",
-												"MinInclusive":	0,
-												"MaxExclusive":	20
-											}
+											"Name":	"Sporebound_Wilds_Cave_Mushrooms_Height\n\t\"$NodeId\":\t\"Imported.Scanner\",\n\t\"$Position\":\t{\n\t\t\"$x\":\t15486,\n\t\t\"$y\":\t24025\n\t},\n\t\"Type\":\t\"Imported\",\n\t\"Skip\":\tfalse,\n\t\"Name\":\t\"Sporebound_Forest_Overground_Ponds\"\n}"
 										}
 									},
 									"Weight":	0.5
@@ -1181,32 +1112,16 @@
 												"Type":	"Floor",
 												"Skip":	false,
 												"Origin":	{
-													"$NodeId":	"BlockType.Pattern-70b87b49-f7ae-452c-9db2-5d13a71d66e0",
-													"Type":	"BlockType",
+													"$NodeId":	"Imported.Pattern-4be9b7b3-a5b0-42eb-b6fe-30f145b4366a",
+													"Type":	"Imported",
 													"Skip":	false,
-													"Material":	{
-														"$NodeId":	"Material-9d650eee-af58-406f-81b6-bb92a51ce05d",
-														"Solid":	"Empty",
-														"SolidBottomUp":	false
-													}
+													"Name":	"Sporebound_Wilds_Caves_Mushrooms_Air"
 												},
 												"Floor":	{
-													"$NodeId":	"BlockSet.Pattern-b8631856-a0e9-4297-8f01-3a275478413c",
-													"Type":	"BlockSet",
+													"$NodeId":	"Imported.Pattern-2d296af5-6e2e-4a5b-a93c-0c81a86f0022",
+													"Type":	"Imported",
 													"Skip":	false,
-													"BlockSet":	{
-														"$NodeId":	"BlockSet.BlockMask-1184dbc9-9ce2-482a-8c72-cebf920f3a59",
-														"Inclusive":	true,
-														"Materials":	[{
-																"$NodeId":	"Material-450d569c-9c02-4c96-85ec-e325b1bb444a",
-																"Solid":	"Soil_Mud_Dry",
-																"SolidBottomUp":	false
-															}, {
-																"$NodeId":	"Material-4d96915c-d6d3-4fc5-81ec-8d8f95715145",
-																"Solid":	"Soil_Mud",
-																"SolidBottomUp":	false
-															}]
-													}
+													"Name":	"Sporebound_Wilds_Caves_Mushrooms_Base"
 												}
 											}, {
 												"$NodeId":	"FieldFunction.Pattern-2efae4ed-dae4-4b1a-bbe7-8a2dd6659d0f",
@@ -1221,7 +1136,7 @@
 													"Octaves":	10,
 													"ScaleXZ":	1,
 													"ScaleY":	1,
-													"Seed":	"A"
+													"Seed":	"Sporebound_Wilds_Caves_Mushrooms_Floor"
 												},
 												"Delimiters":	[{
 														"$NodeId":	"Delimiter.FieldFunction.Pattern-9a696e30-3179-42ef-98fd-dc414c67f349",
@@ -1235,7 +1150,7 @@
 										"Skip":	false,
 										"Max":	{
 											"$NodeId":	"Point3D-816d855a-bc3b-4986-8470-4e12f203d8ae",
-											"X":	3,
+											"X":	0,
 											"Y":	0,
 											"Z":	0
 										},
@@ -1246,28 +1161,18 @@
 											"Z":	0
 										},
 										"SubPattern":	{
-											"$NodeId":	"BlockType.Pattern-2e925451-50eb-4061-906c-83cce0224d1a",
-											"Type":	"BlockType",
+											"$NodeId":	"Imported.Pattern-74cffca6-1e6c-464d-a316-8cc8cb352cf3",
+											"Type":	"Imported",
 											"Skip":	false,
-											"Material":	{
-												"$NodeId":	"Material-43206759-2fa4-433f-8c5e-b7da3bee873b",
-												"Solid":	"Empty",
-												"SolidBottomUp":	false
-											}
+											"Name":	"Sporebound_Wilds_Caves_Mushrooms_Air"
 										}
 									}]
 							},
 							"Scanner":	{
-								"$NodeId":	"Linear.Scanner-bc1c29aa-3adf-495a-a6ee-6865fe25f145",
-								"Type":	"Linear",
+								"$NodeId":	"Imported.Scanner-0cebc388-bd58-40ad-aaf6-be11911948c8",
+								"Type":	"Imported",
 								"Skip":	false,
-								"Axis":	"Y",
-								"AscendingOrder":	false,
-								"Range":	{
-									"$NodeId":	"Integer.Range-8907f077-a4d8-49bc-bdf2-ae6ea8a9216c",
-									"MinInclusive":	0,
-									"MaxExclusive":	20
-								}
+								"Name":	"Sporebound_Wilds_Cave_Mushrooms_Height\n\t\"$NodeId\":\t\"Imported.Scanner\",\n\t\"$Position\":\t{\n\t\t\"$x\":\t15486,\n\t\t\"$y\":\t24025\n\t},\n\t\"Type\":\t\"Imported\",\n\t\"Skip\":\tfalse,\n\t\"Name\":\t\"Sporebound_Forest_Overground_Ponds\"\n}"
 							}
 						}]
 				}
@@ -2147,6 +2052,7 @@
 							"Scanner":	{
 								"$NodeId":	"Linear.Scanner-11d4f2e1-6c07-4133-99ab-668b58fab9b1",
 								"Type":	"Linear",
+								"ExportAs":	"Sporebound_Forest_Overground_Ponds_Height",
 								"Skip":	false,
 								"Axis":	"Y",
 								"AscendingOrder":	false,
@@ -2216,16 +2122,10 @@
 								}
 							},
 							"Scanner":	{
-								"$NodeId":	"Linear.Scanner-e8099d23-373d-4b54-9422-a46a7955d80e",
-								"Type":	"Linear",
+								"$NodeId":	"Imported.Scanner-1e75224a-4269-4e98-90b5-59acb7a56185",
+								"Type":	"Imported",
 								"Skip":	false,
-								"Axis":	"Y",
-								"AscendingOrder":	false,
-								"Range":	{
-									"$NodeId":	"Integer.Range-149f801f-3121-4f48-9f3e-6174c62c87fc",
-									"MinInclusive":	90,
-									"MaxExclusive":	140
-								}
+								"Name":	"Sporebound_Forest_Overground_Ponds_Height"
 							}
 						}
 					}, {
@@ -2719,16 +2619,10 @@
 								}
 							},
 							"Scanner":	{
-								"$NodeId":	"Linear.Scanner-7695f838-0574-49f4-993c-5d71659ba53d",
-								"Type":	"Linear",
+								"$NodeId":	"Imported.Scanner-72d7719f-5ab5-4fb4-839f-63fe22db46d2",
+								"Type":	"Imported",
 								"Skip":	false,
-								"Axis":	"Y",
-								"AscendingOrder":	false,
-								"Range":	{
-									"$NodeId":	"Integer.Range-8e5cc9e2-4ca6-49dd-8c1e-81d8b5ed26b7",
-									"MinInclusive":	90,
-									"MaxExclusive":	140
-								}
+								"Name":	"Sporebound_Forest_Overground_Ponds_Height"
 							}
 						}
 					}]
@@ -2974,12 +2868,6 @@
 				"$Position":	{
 					"$x":	7372,
 					"$y":	-9544
-				}
-			},
-			"SumDensityNode-256e5796-c02d-4d84-8bac-0e71554610f2":	{
-				"$Position":	{
-					"$x":	5987,
-					"$y":	-10371
 				}
 			},
 			"CurveMapper.Density-c21b91f0-2cfc-4a93-ad75-5d1d1f9a9707":	{
@@ -3648,18 +3536,6 @@
 					"$y":	6358
 				}
 			},
-			"BlockType.Pattern-37ec47c0-dd61-4ff4-a90e-adb887e3ac80":	{
-				"$Position":	{
-					"$x":	16378,
-					"$y":	6617
-				}
-			},
-			"Material-f7b41655-021f-417d-aa02-f130393a5998":	{
-				"$Position":	{
-					"$x":	17729,
-					"$y":	6617
-				}
-			},
 			"Linear.Scanner-98202105-8df0-40a9-a784-9f882fbbcfbf":	{
 				"$Position":	{
 					"$x":	13740,
@@ -3690,18 +3566,6 @@
 					"$y":	8003
 				}
 			},
-			"Prefab.Prop-1479f9b4-eacc-462c-a30e-bb93edf5210a":	{
-				"$Position":	{
-					"$x":	14631,
-					"$y":	7615
-				}
-			},
-			"WeightedPath.Prefab.Prop-29940421-76fd-4d1a-843f-a8f8eb9b686e":	{
-				"$Position":	{
-					"$x":	15982,
-					"$y":	7694
-				}
-			},
 			"OrthogonalRotation-bc5bcfbb-4dfd-48da-9491-e00c277c9ad8":	{
 				"$Position":	{
 					"$x":	14631,
@@ -3714,214 +3578,34 @@
 					"$y":	8225
 				}
 			},
-			"Wall.Pattern-1ecb7df6-ad8a-4746-99a4-c7a4becf6515":	{
-				"$Position":	{
-					"$x":	14631,
-					"$y":	8252
-				}
-			},
-			"BlockSet.Pattern-3620a3b6-7db5-41b4-8883-760753982333":	{
-				"$Position":	{
-					"$x":	15981,
-					"$y":	8137
-				}
-			},
-			"BlockSet.BlockMask-f50f3bca-0df5-4b90-86b2-c9ad8250fa1a":	{
-				"$Position":	{
-					"$x":	17332,
-					"$y":	8027
-				}
-			},
-			"Material-2605da05-f790-435a-9900-28f4ba2e60cf":	{
-				"$Position":	{
-					"$x":	18683,
-					"$y":	7898
-				}
-			},
-			"Material-3c399fbf-5fac-4db9-9c79-cbd322ce8933":	{
-				"$Position":	{
-					"$x":	18683,
-					"$y":	8119
-				}
-			},
-			"BlockType.Pattern-f2ef64c0-d818-4e17-92d9-6fdbc836400c":	{
-				"$Position":	{
-					"$x":	15981,
-					"$y":	8579
-				}
-			},
-			"Material-07cba0d7-7c7c-428a-8679-1ce1758de6a3":	{
-				"$Position":	{
-					"$x":	17332,
-					"$y":	8579
-				}
-			},
-			"Cuboid.Pattern-3178da7e-7a01-4c87-8e2c-1d41d3b062e9":	{
-				"$Position":	{
-					"$x":	14631,
-					"$y":	8685
-				}
-			},
-			"Point3D-01c9dad6-52e0-4d44-88c2-41a0cc45458a":	{
-				"$Position":	{
-					"$x":	15981,
-					"$y":	8800
-				}
-			},
-			"Point3D-bb37746f-a55a-4253-a914-f638c5245551":	{
-				"$Position":	{
-					"$x":	15981,
-					"$y":	9059
-				}
-			},
-			"BlockType.Pattern-9cb42ec4-cec4-407f-a731-34a33e9bcd79":	{
-				"$Position":	{
-					"$x":	15981,
-					"$y":	9272
-				}
-			},
-			"Material-1bfe3cb9-6051-4e6e-95ac-c3732b061b19":	{
-				"$Position":	{
-					"$x":	17332,
-					"$y":	9272
-				}
-			},
-			"Linear.Scanner-98af05fa-b92b-464c-894e-04b46590a8c6":	{
-				"$Position":	{
-					"$x":	13652,
-					"$y":	8446
-				}
-			},
-			"Integer.Range-d1fb77a4-4d24-4dcf-88ea-107407693e30":	{
-				"$Position":	{
-					"$x":	14631,
-					"$y":	8947
-				}
-			},
 			"Entry.Weighted.Prop-f558602e-6c0e-4163-9354-6a5fc681bed2":	{
 				"$Position":	{
 					"$x":	12253,
-					"$y":	10354
+					"$y":	10348
 				}
 			},
 			"Locator.Prop-2c1777b6-a23e-4782-acf7-7b45b4e599c9":	{
 				"$Position":	{
 					"$x":	12762,
-					"$y":	10356
+					"$y":	10350
 				}
 			},
 			"StaticRotator.Prop-f11e2a15-a7f3-4732-8a26-60573267aaba":	{
 				"$Position":	{
 					"$x":	13713,
-					"$y":	10166
-				}
-			},
-			"Prefab.Prop-2e685ba3-1185-4cb9-911a-5ffafcb19263":	{
-				"$Position":	{
-					"$x":	14899,
-					"$y":	9733
-				}
-			},
-			"WeightedPath.Prefab.Prop-9f147d7b-1af6-4c38-b1cf-093b5c543269":	{
-				"$Position":	{
-					"$x":	16249,
-					"$y":	10104
+					"$y":	10160
 				}
 			},
 			"OrthogonalRotation-9d6de01e-cc8e-4b6a-be38-38500056cdef":	{
 				"$Position":	{
 					"$x":	14899,
-					"$y":	10112
+					"$y":	10106
 				}
 			},
 			"And.Pattern-e63a403c-c932-4360-b099-693e8e8cb729":	{
 				"$Position":	{
 					"$x":	13713,
-					"$y":	10389
-				}
-			},
-			"Wall.Pattern-1984f9cb-d9c3-4263-b646-8ec110dafaca":	{
-				"$Position":	{
-					"$x":	14899,
-					"$y":	10371
-				}
-			},
-			"BlockSet.Pattern-dd9c491c-46af-4343-9972-48710f00f477":	{
-				"$Position":	{
-					"$x":	16249,
-					"$y":	10325
-				}
-			},
-			"BlockSet.BlockMask-d0446031-b801-46c5-8ed8-4c4126949226":	{
-				"$Position":	{
-					"$x":	17600,
-					"$y":	10214
-				}
-			},
-			"Material-b6f85d58-9acf-4819-90e7-b04c5d44301b":	{
-				"$Position":	{
-					"$x":	18951,
-					"$y":	10085
-				}
-			},
-			"Material-503e547c-930e-46d3-9ee2-05350ae55ccc":	{
-				"$Position":	{
-					"$x":	18951,
-					"$y":	10306
-				}
-			},
-			"BlockType.Pattern-137704f1-0859-4848-b5c6-60f7d71ad244":	{
-				"$Position":	{
-					"$x":	16249,
-					"$y":	10698
-				}
-			},
-			"Material-5e641cb5-e16a-4e31-a763-8209caad345a":	{
-				"$Position":	{
-					"$x":	17600,
-					"$y":	10698
-				}
-			},
-			"Cuboid.Pattern-1f39fb53-29c2-4ee3-80ac-7229f88dceed":	{
-				"$Position":	{
-					"$x":	14899,
-					"$y":	10804
-				}
-			},
-			"Point3D-51e04df4-9627-4735-bead-8ecdd84e27b2":	{
-				"$Position":	{
-					"$x":	16249,
-					"$y":	10919
-				}
-			},
-			"Point3D-96b54180-b7cd-4554-9e72-4faacf96fa22":	{
-				"$Position":	{
-					"$x":	16249,
-					"$y":	11178
-				}
-			},
-			"BlockType.Pattern-f6f1462a-68b8-41b1-8fe7-44ad12861145":	{
-				"$Position":	{
-					"$x":	16249,
-					"$y":	11471
-				}
-			},
-			"Material-648bc5c6-6568-4797-9bff-34150d0ac6ac":	{
-				"$Position":	{
-					"$x":	17625,
-					"$y":	11451
-				}
-			},
-			"Linear.Scanner-2bf4db94-8156-4d43-affc-b5f9604c0530":	{
-				"$Position":	{
-					"$x":	13713,
-					"$y":	10610
-				}
-			},
-			"Integer.Range-6ec6c4e4-a6ad-4469-b060-5007f4ac505b":	{
-				"$Position":	{
-					"$x":	14899,
-					"$y":	11066
+					"$y":	10383
 				}
 			},
 			"Entry.Weighted.Prop-220c39a7-1065-4356-b315-060547ddb5e6":	{
@@ -3942,18 +3626,6 @@
 					"$y":	12626
 				}
 			},
-			"Prefab.Prop-d05cb1e3-1122-4897-b8be-5c2566298589":	{
-				"$Position":	{
-					"$x":	14696,
-					"$y":	12060
-				}
-			},
-			"WeightedPath.Prefab.Prop-4f313858-0599-4dd1-9a32-c8b3bbf84cc2":	{
-				"$Position":	{
-					"$x":	16046,
-					"$y":	12430
-				}
-			},
 			"OrthogonalRotation-a115acc7-a801-4bff-b018-221561b394d9":	{
 				"$Position":	{
 					"$x":	14696,
@@ -3972,42 +3644,6 @@
 					"$y":	12697
 				}
 			},
-			"BlockSet.Pattern-8a3ecee1-e1f0-4731-8c2d-9a232c8d6a6c":	{
-				"$Position":	{
-					"$x":	16046,
-					"$y":	12651
-				}
-			},
-			"BlockSet.BlockMask-4caf9f4e-b722-4c58-92ec-a7c02aa6ac39":	{
-				"$Position":	{
-					"$x":	17397,
-					"$y":	12541
-				}
-			},
-			"Material-bcb6b985-500f-438d-a439-bca5f07f533c":	{
-				"$Position":	{
-					"$x":	18748,
-					"$y":	12412
-				}
-			},
-			"Material-c9ce1e12-55bb-4977-b84f-448addb87fc6":	{
-				"$Position":	{
-					"$x":	18748,
-					"$y":	12633
-				}
-			},
-			"BlockType.Pattern-0da473ce-48b5-4255-860c-2afe8ab17406":	{
-				"$Position":	{
-					"$x":	16046,
-					"$y":	13024
-				}
-			},
-			"Material-d0488c1f-05f9-4332-8b27-9e4ef7652782":	{
-				"$Position":	{
-					"$x":	17397,
-					"$y":	13024
-				}
-			},
 			"Cuboid.Pattern-f67fb9cf-0ec8-4c57-94ff-219efbf2e192":	{
 				"$Position":	{
 					"$x":	14683,
@@ -4024,30 +3660,6 @@
 				"$Position":	{
 					"$x":	16046,
 					"$y":	13504
-				}
-			},
-			"BlockType.Pattern-299ae40b-fa6f-42fd-a7af-ad3cf41b55f7":	{
-				"$Position":	{
-					"$x":	16046,
-					"$y":	13763
-				}
-			},
-			"Material-81c6a7cb-c437-49eb-8653-341c86698295":	{
-				"$Position":	{
-					"$x":	17397,
-					"$y":	13763
-				}
-			},
-			"Linear.Scanner-9c829a99-e071-4a15-95b2-16373ead1461":	{
-				"$Position":	{
-					"$x":	13667,
-					"$y":	13070
-				}
-			},
-			"Integer.Range-4920ef52-73f5-4bde-9103-16e60a67cf1b":	{
-				"$Position":	{
-					"$x":	14735,
-					"$y":	13700
 				}
 			},
 			"Locator.Prop-a470f87b-77cb-4d41-af73-e681ce114e43":	{
@@ -4092,42 +3704,6 @@
 					"$y":	14594
 				}
 			},
-			"BlockType.Pattern-70b87b49-f7ae-452c-9db2-5d13a71d66e0":	{
-				"$Position":	{
-					"$x":	16546,
-					"$y":	14480
-				}
-			},
-			"Material-9d650eee-af58-406f-81b6-bb92a51ce05d":	{
-				"$Position":	{
-					"$x":	17496,
-					"$y":	14471
-				}
-			},
-			"BlockSet.Pattern-b8631856-a0e9-4297-8f01-3a275478413c":	{
-				"$Position":	{
-					"$x":	16546,
-					"$y":	14701
-				}
-			},
-			"BlockSet.BlockMask-1184dbc9-9ce2-482a-8c72-cebf920f3a59":	{
-				"$Position":	{
-					"$x":	17496,
-					"$y":	14692
-				}
-			},
-			"Material-450d569c-9c02-4c96-85ec-e325b1bb444a":	{
-				"$Position":	{
-					"$x":	18847,
-					"$y":	14563
-				}
-			},
-			"Material-4d96915c-d6d3-4fc5-81ec-8d8f95715145":	{
-				"$Position":	{
-					"$x":	18847,
-					"$y":	14784
-				}
-			},
 			"FieldFunction.Pattern-2efae4ed-dae4-4b1a-bbe7-8a2dd6659d0f":	{
 				"$Position":	{
 					"$x":	15282,
@@ -4162,30 +3738,6 @@
 				"$Position":	{
 					"$x":	15282,
 					"$y":	15298
-				}
-			},
-			"BlockType.Pattern-2e925451-50eb-4061-906c-83cce0224d1a":	{
-				"$Position":	{
-					"$x":	15282,
-					"$y":	15557
-				}
-			},
-			"Material-43206759-2fa4-433f-8c5e-b7da3bee873b":	{
-				"$Position":	{
-					"$x":	16546,
-					"$y":	15577
-				}
-			},
-			"Linear.Scanner-bc1c29aa-3adf-495a-a6ee-6865fe25f145":	{
-				"$Position":	{
-					"$x":	13246,
-					"$y":	15360
-				}
-			},
-			"Integer.Range-8907f077-a4d8-49bc-bdf2-ae6ea8a9216c":	{
-				"$Position":	{
-					"$x":	14162,
-					"$y":	15398
 				}
 			},
 			"Runtime-b34e319e-98bb-4927-a33a-7fd9ff6c2d87":	{
@@ -5304,18 +4856,6 @@
 					"$y":	19612
 				}
 			},
-			"Linear.Scanner-e8099d23-373d-4b54-9422-a46a7955d80e":	{
-				"$Position":	{
-					"$x":	15491,
-					"$y":	19766
-				}
-			},
-			"Integer.Range-149f801f-3121-4f48-9f3e-6174c62c87fc":	{
-				"$Position":	{
-					"$x":	16184,
-					"$y":	19809
-				}
-			},
 			"Constant.PropDistribution-6ac3977d-e893-4047-9e55-d384b867b221":	{
 				"$Position":	{
 					"$x":	14074,
@@ -5916,18 +5456,6 @@
 					"$y":	23762
 				}
 			},
-			"Linear.Scanner-7695f838-0574-49f4-993c-5d71659ba53d":	{
-				"$Position":	{
-					"$x":	15486,
-					"$y":	23970
-				}
-			},
-			"Integer.Range-8e5cc9e2-4ca6-49dd-8c1e-81d8b5ed26b7":	{
-				"$Position":	{
-					"$x":	16179,
-					"$y":	24013
-				}
-			},
 			"DensityDelimited.EnvironmentProvider-5462ecf5-858a-40e1-bc12-e8d59e39f174":	{
 				"$Position":	{
 					"$x":	1041,
@@ -5984,18 +5512,6 @@
 					"$y":	25232
 				}
 			},
-			"ImportedDensityNode-0fb958ef-ee7f-40b3-baa1-6cedf5cb91ff":	{
-				"$Position":	{
-					"$x":	7076,
-					"$y":	-10394
-				}
-			},
-			"ImportedDensityNode-da594e7a-4961-4718-ba54-aa6cf96da378":	{
-				"$Position":	{
-					"$x":	7078,
-					"$y":	-10173
-				}
-			},
 			"ImportedMaterialProvider-e5eadede-39d6-4a30-bcf8-eecc838bd089":	{
 				"$Position":	{
 					"$x":	5643,
@@ -6043,6 +5559,240 @@
 					"$x":	5704,
 					"$y":	-2547
 				}
+			},
+			"SumDensityNode-27f652ca-dc6d-4fa1-9354-257c25dc8ec0":	{
+				"$Position":	{
+					"$x":	5914,
+					"$y":	-10366
+				}
+			},
+			"CurveMapper.Density-fc5b7959-0818-4308-94a0-3ae0bb7773c2":	{
+				"$Position":	{
+					"$x":	7301,
+					"$y":	-10458
+				}
+			},
+			"ManualCurve-efc72958-61e6-40a7-b185-3221712dd5e8":	{
+				"$Position":	{
+					"$x":	8148,
+					"$y":	-9752
+				}
+			},
+			"CurvePoint-8187a252-e7ed-468f-9074-e5848fdd0921":	{
+				"$Position":	{
+					"$x":	9492,
+					"$y":	-9939
+				}
+			},
+			"CurvePoint-bab0fae0-6817-4740-ad99-ca475d60fc41":	{
+				"$Position":	{
+					"$x":	9517,
+					"$y":	-9648
+				}
+			},
+			"SumDensityNode-babc2380-1f76-491c-852e-6ea03db6b621":	{
+				"$Position":	{
+					"$x":	8171,
+					"$y":	-10278
+				}
+			},
+			"BaseHeight.Density-a8b091aa-80ca-497f-b4b3-2585cdb4dff6":	{
+				"$Position":	{
+					"$x":	9419,
+					"$y":	-10470
+				}
+			},
+			"ConstantDensityNode-3263afb6-171f-4097-911c-dcc9ccb829b7":	{
+				"$Position":	{
+					"$x":	9430,
+					"$y":	-10212
+				}
+			},
+			"SimplexNoise2DDensityNode-9f5470a6-fa72-4f51-b050-e7e1b2777409":	{
+				"$Position":	{
+					"$x":	7301,
+					"$y":	-10157
+				}
+			},
+			"Imported.Scanner-72d7719f-5ab5-4fb4-839f-63fe22db46d2":	{
+				"$Position":	{
+					"$x":	15464,
+					"$y":	23924
+				}
+			},
+			"Imported.Scanner-1e75224a-4269-4e98-90b5-59acb7a56185":	{
+				"$Position":	{
+					"$x":	15628,
+					"$y":	19755
+				}
+			},
+			"Imported.Scanner-beff14bb-00fd-41fd-a0d3-f29e20e0f111":	{
+				"$Position":	{
+					"$x":	13649,
+					"$y":	8484
+				}
+			},
+			"Imported.Scanner-81193dd9-eeac-45d6-9bc1-6ebcedcc2666":	{
+				"$Position":	{
+					"$x":	13709,
+					"$y":	10636
+				}
+			},
+			"Imported.Scanner-1f14e77b-b383-4657-9368-c5986251687a":	{
+				"$Position":	{
+					"$x":	13674,
+					"$y":	13080
+				}
+			},
+			"Imported.Scanner-0cebc388-bd58-40ad-aaf6-be11911948c8":	{
+				"$Position":	{
+					"$x":	13297,
+					"$y":	14962
+				}
+			},
+			"Imported.Prop-a04bb0c0-b30f-443d-988c-e4cf70a3d8e8":	{
+				"$Position":	{
+					"$x":	14630,
+					"$y":	7774
+				}
+			},
+			"Imported.Prop-6714c0a7-ad1f-4739-aea0-8d938ca2c0db":	{
+				"$Position":	{
+					"$x":	14908,
+					"$y":	9890
+				}
+			},
+			"Imported.Prop-5c9d7b62-a071-4bbf-8bb2-771e8398d170":	{
+				"$Position":	{
+					"$x":	14696,
+					"$y":	12200
+				}
+			},
+			"Imported.Pattern-7b81979d-0d37-4e34-ac90-86be0829899a":	{
+				"$Position":	{
+					"$x":	16382,
+					"$y":	6599
+				}
+			},
+			"Wall.Pattern-992a9080-5394-4527-88b5-fbe2547a9057":	{
+				"$Position":	{
+					"$x":	14635,
+					"$y":	8227
+				}
+			},
+			"Imported.Pattern-d5f53ec1-ce78-436a-89af-c512eb508aaf":	{
+				"$Position":	{
+					"$x":	15947,
+					"$y":	8123
+				}
+			},
+			"Imported.Pattern-a8559c4f-91f3-44d5-b074-34ce781bdca3":	{
+				"$Position":	{
+					"$x":	15952,
+					"$y":	8298
+				}
+			},
+			"Imported.Pattern-b583e7c6-8c3f-4ed7-9bcd-26b6c7cabe75":	{
+				"$Position":	{
+					"$x":	16024,
+					"$y":	12804
+				}
+			},
+			"Imported.Pattern-9e631319-d206-4c14-855d-84e1c79d9c59":	{
+				"$Position":	{
+					"$x":	16019,
+					"$y":	12629
+				}
+			},
+			"Wall.Pattern-b5d09015-5ff8-40aa-8d26-e80f7c19482f":	{
+				"$Position":	{
+					"$x":	14904,
+					"$y":	10365
+				}
+			},
+			"Imported.Pattern-aa3a5d07-883d-49f1-9108-f66909f1f33e":	{
+				"$Position":	{
+					"$x":	16213,
+					"$y":	10297
+				}
+			},
+			"Imported.Pattern-2ab2707e-cff9-46d0-8bfc-b541274926fa":	{
+				"$Position":	{
+					"$x":	16218,
+					"$y":	10472
+				}
+			},
+			"Point3D-51e04df4-9627-4735-bead-8ecdd84e27b2":	{
+				"$Position":	{
+					"$x":	16249,
+					"$y":	10913
+				}
+			},
+			"Point3D-96b54180-b7cd-4554-9e72-4faacf96fa22":	{
+				"$Position":	{
+					"$x":	16249,
+					"$y":	11172
+				}
+			},
+			"Cuboid.Pattern-1f39fb53-29c2-4ee3-80ac-7229f88dceed":	{
+				"$Position":	{
+					"$x":	14899,
+					"$y":	10798
+				}
+			},
+			"Point3D-bb37746f-a55a-4253-a914-f638c5245551":	{
+				"$Position":	{
+					"$x":	15981,
+					"$y":	9059
+				}
+			},
+			"Point3D-01c9dad6-52e0-4d44-88c2-41a0cc45458a":	{
+				"$Position":	{
+					"$x":	15981,
+					"$y":	8800
+				}
+			},
+			"Cuboid.Pattern-3178da7e-7a01-4c87-8e2c-1d41d3b062e9":	{
+				"$Position":	{
+					"$x":	14631,
+					"$y":	8685
+				}
+			},
+			"Imported.Pattern-3db4c554-1525-4996-9bd6-d3d3555e9d1e":	{
+				"$Position":	{
+					"$x":	15973,
+					"$y":	9315
+				}
+			},
+			"Imported.Pattern-681118b6-980b-4a5e-a60e-49d687effef1":	{
+				"$Position":	{
+					"$x":	16254,
+					"$y":	11421
+				}
+			},
+			"Imported.Pattern-cf198420-07dd-41ee-ad30-b19e1c560c5a":	{
+				"$Position":	{
+					"$x":	16057,
+					"$y":	13775
+				}
+			},
+			"Imported.Pattern-74cffca6-1e6c-464d-a316-8cc8cb352cf3":	{
+				"$Position":	{
+					"$x":	15283,
+					"$y":	15543
+				}
+			},
+			"Imported.Pattern-4be9b7b3-a5b0-42eb-b6fe-30f145b4366a":	{
+				"$Position":	{
+					"$x":	16534,
+					"$y":	14484
+				}
+			},
+			"Imported.Pattern-2d296af5-6e2e-4a5b-a93c-0c81a86f0022":	{
+				"$Position":	{
+					"$x":	16538,
+					"$y":	14701
+				}
 			}
 		},
 		"$FloatingNodes":	[],
@@ -6085,7 +5835,7 @@
 					"$x":	3412.25,
 					"$y":	-14761.8125
 				},
-				"$width":	6051.1875,
+				"$width":	6850.875,
 				"$height":	7975.25,
 				"$name":	"Caves"
 			}, {
@@ -6101,7 +5851,7 @@
 					"$x":	3592.8125,
 					"$y":	-10667.875
 				},
-				"$width":	4492.125,
+				"$width":	6546.1875,
 				"$height":	3576.1875,
 				"$name":	"Small Caves"
 			}, {
@@ -6117,7 +5867,7 @@
 					"$x":	4203.0625,
 					"$y":	-10575.75
 				},
-				"$width":	3629.75,
+				"$width":	5887,
 				"$height":	1277.125,
 				"$name":	"Big Hill Baseline"
 			}, {
@@ -6226,16 +5976,8 @@
 				"$name":	"Floor Mushrooms"
 			}, {
 				"$Position":	{
-					"$x":	12157.1875,
-					"$y":	11909.8125
-				},
-				"$width":	7733.75,
-				"$height":	2117,
-				"$name":	"Wall Mushrooms North"
-			}, {
-				"$Position":	{
 					"$x":	12123.3125,
-					"$y":	9622.625
+					"$y":	9617.25
 				},
 				"$width":	8014.6875,
 				"$height":	2112.125,
@@ -6392,6 +6134,14 @@
 				"$width":	5719.875,
 				"$height":	1492.625,
 				"$name":	"Mushrooms"
+			}, {
+				"$Position":	{
+					"$x":	12157.1875,
+					"$y":	11909.8125
+				},
+				"$width":	7733.75,
+				"$height":	2117,
+				"$name":	"Wall Mushrooms North"
 			}],
 		"$Comments":	[],
 		"$WorkspaceID":	"HytaleGenerator - Biome"

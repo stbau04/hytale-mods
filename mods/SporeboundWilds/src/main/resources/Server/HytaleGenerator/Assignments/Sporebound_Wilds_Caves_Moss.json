@@ -1,0 +1,177 @@
+{
+	"$NodeId":	"Constant.Assignments-10fb5b71-e500-4079-bc93-87faf3a98e06",
+	"Type":	"Constant",
+	"ExportAs":	"Sporebound_Wilds_Caves_Moss",
+	"Prop":	{
+		"$NodeId":	"Locator.Prop-0c150d62-3683-4a5c-bab5-22515c64ec76",
+		"Type":	"Locator",
+		"Skip":	false,
+		"PlacementCap":	1,
+		"Prop":	{
+			"$NodeId":	"Manual.Prop-c807b422-6976-4c29-91d7-3c04a64606ee",
+			"Type":	"Manual",
+			"Skip":	false,
+			"Blocks":	[{
+					"$NodeId":	"Block.Manual.Prop-1e6d8f46-5090-47a8-8bb2-f3a467c420c5",
+					"Material":	{
+						"$NodeId":	"Material-68724ada-5203-45bb-9139-25b7c6490d0d",
+						"Solid":	"Plant_Moss_Rug_Green_Dark",
+						"SolidBottomUp":	false
+					},
+					"Position":	{
+						"$NodeId":	"Vector3i-8bb4d662-af65-40fd-897b-a32c83560d8a",
+						"X":	0,
+						"Y":	0,
+						"Z":	0
+					}
+				}]
+		},
+		"Pattern":	{
+			"$NodeId":	"Floor.Pattern-30d20131-527e-44cd-b629-b529029e577d",
+			"Type":	"Floor",
+			"Skip":	false,
+			"Origin":	{
+				"$NodeId":	"BlockType.Pattern-796f5ede-b263-4669-bdf6-fb0f6cba4271",
+				"Type":	"BlockType",
+				"Skip":	false,
+				"Material":	{
+					"$NodeId":	"Material-10932cc8-1d00-4929-a6a1-f8b972617afc",
+					"Solid":	"Empty",
+					"SolidBottomUp":	false
+				}
+			},
+			"Floor":	{
+				"$NodeId":	"BlockSet.Pattern-3694d368-0666-4dce-b86b-5d3968b2dd02",
+				"Type":	"BlockSet",
+				"Skip":	false,
+				"BlockSet":	{
+					"$NodeId":	"BlockSet.BlockMask-f9791af4-e47f-473d-8b27-7e9b204f4ac0",
+					"Inclusive":	true,
+					"Materials":	[{
+							"$NodeId":	"Material-c1c99c27-9439-4eb2-9b74-5dc255f9b397",
+							"Solid":	"Soil_Mud",
+							"SolidBottomUp":	false
+						}, {
+							"$NodeId":	"Material-2bb56c7b-a6d2-4012-b367-cd0238c205c2",
+							"Solid":	"",
+							"Fluid":	"Water_Source",
+							"SolidBottomUp":	false
+						}]
+				}
+			}
+		},
+		"Scanner":	{
+			"$NodeId":	"Linear.Scanner-de33bdb6-a744-4c17-a069-f2f9c9795311",
+			"Type":	"Linear",
+			"Skip":	false,
+			"Axis":	"Y",
+			"AscendingOrder":	false,
+			"Range":	{
+				"$NodeId":	"Integer.Range-eaa013fe-ec8a-4091-9031-31486fab3e8e",
+				"MinInclusive":	0,
+				"MaxExclusive":	70
+			}
+		}
+	},
+	"$NodeEditorMetadata":	{
+		"$Nodes":	{
+			"Locator.Prop-0c150d62-3683-4a5c-bab5-22515c64ec76":	{
+				"$Position":	{
+					"$x":	1163,
+					"$y":	1627
+				}
+			},
+			"Manual.Prop-c807b422-6976-4c29-91d7-3c04a64606ee":	{
+				"$Position":	{
+					"$x":	1869,
+					"$y":	1629
+				}
+			},
+			"Block.Manual.Prop-1e6d8f46-5090-47a8-8bb2-f3a467c420c5":	{
+				"$Position":	{
+					"$x":	2534,
+					"$y":	1630
+				}
+			},
+			"Material-68724ada-5203-45bb-9139-25b7c6490d0d":	{
+				"$Position":	{
+					"$x":	3318,
+					"$y":	1635
+				}
+			},
+			"Vector3i-8bb4d662-af65-40fd-897b-a32c83560d8a":	{
+				"$Position":	{
+					"$x":	2891,
+					"$y":	1755
+				}
+			},
+			"Floor.Pattern-30d20131-527e-44cd-b629-b529029e577d":	{
+				"$Position":	{
+					"$x":	1926,
+					"$y":	2083
+				}
+			},
+			"BlockType.Pattern-796f5ede-b263-4669-bdf6-fb0f6cba4271":	{
+				"$Position":	{
+					"$x":	2705,
+					"$y":	2003
+				}
+			},
+			"Material-10932cc8-1d00-4929-a6a1-f8b972617afc":	{
+				"$Position":	{
+					"$x":	3379,
+					"$y":	2003
+				}
+			},
+			"BlockSet.Pattern-3694d368-0666-4dce-b86b-5d3968b2dd02":	{
+				"$Position":	{
+					"$x":	2683,
+					"$y":	2218
+				}
+			},
+			"BlockSet.BlockMask-f9791af4-e47f-473d-8b27-7e9b204f4ac0":	{
+				"$Position":	{
+					"$x":	3443,
+					"$y":	2214
+				}
+			},
+			"Material-c1c99c27-9439-4eb2-9b74-5dc255f9b397":	{
+				"$Position":	{
+					"$x":	4183,
+					"$y":	2195
+				}
+			},
+			"Material-2bb56c7b-a6d2-4012-b367-cd0238c205c2":	{
+				"$Position":	{
+					"$x":	4186,
+					"$y":	2365
+				}
+			},
+			"Linear.Scanner-de33bdb6-a744-4c17-a069-f2f9c9795311":	{
+				"$Position":	{
+					"$x":	1940,
+					"$y":	2417
+				}
+			},
+			"Integer.Range-eaa013fe-ec8a-4091-9031-31486fab3e8e":	{
+				"$Position":	{
+					"$x":	2633,
+					"$y":	2460
+				}
+			},
+			"Constant.Assignments-10fb5b71-e500-4079-bc93-87faf3a98e06":	{
+				"$Position":	{
+					"$x":	504,
+					"$y":	1629
+				},
+				"$Title":	"[ROOT] Constant Assignments"
+			}
+		},
+		"$FloatingNodes":	[],
+		"$Links":	{
+		},
+		"$Groups":	[],
+		"$Comments":	[],
+		"$WorkspaceID":	"HytaleGenerator - Assignments"
+	}
+}

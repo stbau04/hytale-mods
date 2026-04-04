@@ -1,0 +1,521 @@
+{
+  "version": 8,
+  "blockIdVersion": 11,
+  "anchorX": 0,
+  "anchorY": 0,
+  "anchorZ": 0,
+  "blocks": [
+    {
+      "x": -4,
+      "y": -1,
+      "z": -3,
+      "name": "Rock_Basalt_Brick"
+    },
+    {
+      "x": -4,
+      "y": 0,
+      "z": -3,
+      "name": "Rock_Basalt_Brick"
+    },
+    {
+      "x": -4,
+      "y": 1,
+      "z": -3,
+      "name": "Rock_Basalt_Brick"
+    },
+    {
+      "x": -4,
+      "y": 2,
+      "z": -3,
+      "name": "*Rock_Basalt_Brick_Roof_State_Definitions_Corner_Right",
+      "rotation": 3
+    },
+    {
+      "x": -4,
+      "y": -1,
+      "z": -2,
+      "name": "Rock_Basalt_Brick"
+    },
+    {
+      "x": -4,
+      "y": 0,
+      "z": -2,
+      "name": "Rock_Basalt_Brick"
+    },
+    {
+      "x": -4,
+      "y": 1,
+      "z": -2,
+      "name": "Rock_Basalt_Brick"
+    },
+    {
+      "x": -4,
+      "y": 2,
+      "z": -2,
+      "name": "Rock_Basalt_Brick_Roof",
+      "rotation": 3
+    },
+    {
+      "x": -4,
+      "y": -1,
+      "z": -1,
+      "name": "Rock_Basalt_Brick"
+    },
+    {
+      "x": -4,
+      "y": 0,
+      "z": -1,
+      "name": "Rock_Basalt_Brick"
+    },
+    {
+      "x": -4,
+      "y": 1,
+      "z": -1,
+      "name": "Furniture_Ancient_Window",
+      "rotation": 1
+    },
+    {
+      "x": -4,
+      "y": 2,
+      "z": -1,
+      "name": "Rock_Basalt_Brick_Roof",
+      "rotation": 3
+    },
+    {
+      "x": -4,
+      "y": -1,
+      "z": 0,
+      "name": "Rock_Basalt_Brick"
+    },
+    {
+      "x": -4,
+      "y": 0,
+      "z": 0,
+      "name": "Rock_Basalt_Brick"
+    },
+    {
+      "x": -4,
+      "y": 1,
+      "z": 0,
+      "name": "Furniture_Ancient_Window",
+      "rotation": 1
+    },
+    {
+      "x": -4,
+      "y": 2,
+      "z": 0,
+      "name": "Rock_Basalt_Brick_Roof",
+      "rotation": 3
+    },
+    {
+      "x": -4,
+      "y": -1,
+      "z": 1,
+      "name": "Rock_Basalt_Brick"
+    },
+    {
+      "x": -4,
+      "y": 0,
+      "z": 1,
+      "name": "Rock_Basalt_Brick"
+    },
+    {
+      "x": -4,
+      "y": 1,
+      "z": 1,
+      "name": "Rock_Basalt_Brick"
+    },
+    {
+      "x": -4,
+      "y": 2,
+      "z": 1,
+      "name": "Rock_Basalt_Brick_Roof",
+      "rotation": 3
+    },
+    {
+      "x": -4,
+      "y": -1,
+      "z": 2,
+      "name": "Rock_Basalt_Brick"
+    },
+    {
+      "x": -4,
+      "y": 0,
+      "z": 2,
+      "name": "Rock_Basalt_Brick"
+    },
+    {
+      "x": -4,
+      "y": 1,
+      "z": 2,
+      "name": "Rock_Basalt_Brick"
+    },
+    {
+      "x": -4,
+      "y": 2,
+      "z": 2,
+      "name": "*Rock_Basalt_Brick_Roof_State_Definitions_Corner_Right"
+    },
+    {
+      "x": -3,
+      "y": -1,
+      "z": -3,
+      "name": "Rock_Basalt_Brick"
+    },
+    {
+      "x": -3,
+      "y": 0,
+      "z": -3,
+      "name": "Rock_Basalt_Brick"
+    },
+    {
+      "x": -3,
+      "y": 1,
+      "z": -3,
+      "name": "Rock_Basalt_Brick"
+    },
+    {
+      "x": -3,
+      "y": 2,
+      "z": -3,
+      "name": "Rock_Basalt_Brick_Roof",
+      "rotation": 2
+    },
+    {
+      "x": -3,
+      "y": -1,
+      "z": -2,
+      "name": "Rock_Basalt_Brick"
+    },
+    {
+      "x": -3,
+      "y": 0,
+      "z": -2,
+      "name": "Furniture_Ancient_Bench",
+      "filler": 31
+    },
+    {
+      "x": -3,
+      "y": 2,
+      "z": -2,
+      "name": "Furniture_Ancient_Platform"
+    },
+    {
+      "x": -3,
+      "y": -1,
+      "z": -1,
+      "name": "Rock_Basalt_Brick"
+    },
+    {
+      "x": -3,
+      "y": -1,
+      "z": 0,
+      "name": "Rock_Basalt_Brick"
+    },
+    {
+      "x": -3,
+      "y": -1,
+      "z": 1,
+      "name": "Rock_Basalt_Brick"
+    },
+    {
+      "x": -3,
+      "y": 0,
+      "z": 1,
+      "name": "Furniture_Ancient_Chest_Large",
+      "components": {
+        "Components": {
+          "ItemContainerBlock": {
+            "ItemContainer": {
+              "Capacity": 36,
+              "Items": {}
+            },
+            "Capacity": 36
+          }
+        }
+      },
+      "rotation": 2
+    },
+    {
+      "x": -3,
+      "y": 1,
+      "z": 1,
+      "name": "Deco_SpiderWeb",
+      "support": 15,
+      "rotation": 2
+    },
+    {
+      "x": -3,
+      "y": 2,
+      "z": 1,
+      "name": "Furniture_Ancient_Shelf",
+      "rotation": 2
+    },
+    {
+      "x": -3,
+      "y": -1,
+      "z": 2,
+      "name": "Rock_Basalt_Brick"
+    },
+    {
+      "x": -3,
+      "y": 0,
+      "z": 2,
+      "name": "Rock_Basalt_Brick"
+    },
+    {
+      "x": -3,
+      "y": 1,
+      "z": 2,
+      "name": "Rock_Basalt_Brick"
+    },
+    {
+      "x": -3,
+      "y": 2,
+      "z": 2,
+      "name": "Rock_Basalt_Brick_Roof"
+    },
+    {
+      "x": -2,
+      "y": -1,
+      "z": -3,
+      "name": "Rock_Basalt_Brick"
+    },
+    {
+      "x": -2,
+      "y": 0,
+      "z": -3,
+      "name": "Rock_Basalt_Brick"
+    },
+    {
+      "x": -2,
+      "y": 1,
+      "z": -3,
+      "name": "Rock_Basalt_Brick"
+    },
+    {
+      "x": -2,
+      "y": 2,
+      "z": -3,
+      "name": "Rock_Basalt_Brick_Roof",
+      "rotation": 2
+    },
+    {
+      "x": -2,
+      "y": -1,
+      "z": -2,
+      "name": "Rock_Basalt_Brick"
+    },
+    {
+      "x": -2,
+      "y": 0,
+      "z": -2,
+      "name": "Furniture_Ancient_Bench",
+      "components": {
+        "Components": {}
+      }
+    },
+    {
+      "x": -2,
+      "y": 2,
+      "z": -2,
+      "name": "Deco_SpiderWeb",
+      "support": 15,
+      "rotation": 10
+    },
+    {
+      "x": -2,
+      "y": -1,
+      "z": -1,
+      "name": "Rock_Basalt_Brick"
+    },
+    {
+      "x": -2,
+      "y": -1,
+      "z": 0,
+      "name": "Rock_Basalt_Brick"
+    },
+    {
+      "x": -2,
+      "y": -1,
+      "z": 1,
+      "name": "Rock_Basalt_Brick"
+    },
+    {
+      "x": -2,
+      "y": 0,
+      "z": 1,
+      "name": "Furniture_Ancient_Chest_Large",
+      "filler": 1,
+      "rotation": 2
+    },
+    {
+      "x": -2,
+      "y": 2,
+      "z": 1,
+      "name": "Furniture_Ancient_Shelf",
+      "rotation": 2
+    },
+    {
+      "x": -2,
+      "y": -1,
+      "z": 2,
+      "name": "Rock_Basalt_Brick"
+    },
+    {
+      "x": -2,
+      "y": 0,
+      "z": 2,
+      "name": "Rock_Basalt_Brick"
+    },
+    {
+      "x": -2,
+      "y": 1,
+      "z": 2,
+      "name": "Rock_Basalt_Brick"
+    },
+    {
+      "x": -2,
+      "y": 2,
+      "z": 2,
+      "name": "Rock_Basalt_Brick_Roof"
+    },
+    {
+      "x": -1,
+      "y": -1,
+      "z": -3,
+      "name": "Rock_Basalt_Brick"
+    },
+    {
+      "x": -1,
+      "y": 0,
+      "z": -3,
+      "name": "Rock_Basalt_Brick"
+    },
+    {
+      "x": -1,
+      "y": 1,
+      "z": -3,
+      "name": "Rock_Basalt_Brick"
+    },
+    {
+      "x": -1,
+      "y": 2,
+      "z": -3,
+      "name": "*Rock_Basalt_Brick_Roof_State_Definitions_Corner_Right",
+      "rotation": 2
+    },
+    {
+      "x": -1,
+      "y": -1,
+      "z": -2,
+      "name": "Rock_Basalt_Brick"
+    },
+    {
+      "x": -1,
+      "y": 0,
+      "z": -2,
+      "name": "Rock_Basalt_Brick"
+    },
+    {
+      "x": -1,
+      "y": 1,
+      "z": -2,
+      "name": "Rock_Basalt_Brick"
+    },
+    {
+      "x": -1,
+      "y": 2,
+      "z": -2,
+      "name": "Rock_Basalt_Brick_Roof",
+      "rotation": 1
+    },
+    {
+      "x": -1,
+      "y": -1,
+      "z": -1,
+      "name": "Rock_Basalt_Brick"
+    },
+    {
+      "x": -1,
+      "y": 0,
+      "z": -1,
+      "name": "Rock_Basalt_Brick"
+    },
+    {
+      "x": -1,
+      "y": 1,
+      "z": -1,
+      "name": "Rock_Basalt_Brick"
+    },
+    {
+      "x": -1,
+      "y": 2,
+      "z": -1,
+      "name": "Rock_Basalt_Brick_Roof",
+      "rotation": 1
+    },
+    {
+      "x": -1,
+      "y": -1,
+      "z": 0,
+      "name": "Rock_Basalt_Brick"
+    },
+    {
+      "x": -1,
+      "y": 2,
+      "z": 0,
+      "name": "Rock_Basalt_Brick_Roof_Hollow",
+      "rotation": 1
+    },
+    {
+      "x": -1,
+      "y": -1,
+      "z": 1,
+      "name": "Rock_Basalt_Brick"
+    },
+    {
+      "x": -1,
+      "y": 0,
+      "z": 1,
+      "name": "Rock_Basalt_Brick"
+    },
+    {
+      "x": -1,
+      "y": 1,
+      "z": 1,
+      "name": "Rock_Basalt_Brick"
+    },
+    {
+      "x": -1,
+      "y": 2,
+      "z": 1,
+      "name": "Rock_Basalt_Brick_Roof",
+      "rotation": 1
+    },
+    {
+      "x": -1,
+      "y": -1,
+      "z": 2,
+      "name": "Rock_Basalt_Brick"
+    },
+    {
+      "x": -1,
+      "y": 0,
+      "z": 2,
+      "name": "Rock_Basalt_Brick"
+    },
+    {
+      "x": -1,
+      "y": 1,
+      "z": 2,
+      "name": "Rock_Basalt_Brick"
+    },
+    {
+      "x": -1,
+      "y": 2,
+      "z": 2,
+      "name": "*Rock_Basalt_Brick_Roof_State_Definitions_Corner_Left"
+    }
+  ]
+}

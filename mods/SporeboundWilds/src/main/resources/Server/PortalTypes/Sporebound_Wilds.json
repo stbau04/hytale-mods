@@ -1,0 +1,10 @@
+{
+  "InstanceId": "Sporebound_Wilds",
+  "Description": {
+    "DisplayName": "portals.Sporebound_Wilds",
+    "FlavorText": "portals.Sporebound_Wilds.description",
+    "ThemeColor": "#81fdedff",
+    "SplashImage": "DefaultArtwork.png"
+  },
+  "VoidInvasionEnabled": false
+}

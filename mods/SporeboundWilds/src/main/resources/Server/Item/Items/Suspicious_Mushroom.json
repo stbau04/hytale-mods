@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "items.suspicious_mushroom.name",
-    "Description": "items.suspicious_mushroom.description"
+    "Name": "items.Suspicious_Mushroom.name",
+    "Description": "items.Suspicious_Mushroom.description"
   },
   "Id": "Suspicious_Mushroom",
   "MaxStack": 100,

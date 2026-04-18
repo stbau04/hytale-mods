@@ -9,21 +9,17 @@
       "x": 0,
       "y": 0,
       "z": 0,
-      "name": "Furniture_Ancient_Chest_Small",
+      "name": "Plant_Crop_Mushroom_Cap_Red",
       "components": {
         "Components": {
+          "FarmingBlock": {
+            "LastTickGameTime": "0001-01-01T14:37:10.514488618Z"
+          },
           "PlacedByInteraction": {
             "WhoPlacedUuid": {
               "$binary": "6M3dAtDsSlibMiQ+9DKfWw==",
               "$type": "04"
             }
-          },
-          "ItemContainerBlock": {
-            "ItemContainer": {
-              "Capacity": 18,
-              "Items": {}
-            },
-            "Capacity": 18
           }
         }
       }

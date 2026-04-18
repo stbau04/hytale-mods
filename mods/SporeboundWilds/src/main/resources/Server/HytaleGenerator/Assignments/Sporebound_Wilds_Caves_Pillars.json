@@ -1,0 +1,61 @@
+{
+	"$NodeId":	"Constant.Assignments-05d90f87-b3f6-4ecd-86ca-9f3141a0d599",
+	"Type":	"Constant",
+	"ExportAs":	"Sporebound_Wilds_Caves_Pillars",
+	"Prop":	{
+		"$NodeId":	"RandomRotator.Prop-8f368dd5-69ea-4755-a153-4a54fc745856",
+		"Type":	"RandomRotator",
+		"Skip":	false,
+		"HorizontalRotations":	true,
+		"Prop":	{
+			"$NodeId":	"Prefab.Prop-5aac5fb5-68aa-4f83-8f92-74745c394e2b",
+			"Type":	"Prefab",
+			"Skip":	false,
+			"WeightedPrefabPaths":	[{
+					"$NodeId":	"WeightedPath.Prefab.Prop-d94c9838-61fa-485a-b898-998f92b22491",
+					"Path":	"Sporebound_Wilds_Caves_Pillars",
+					"Weight":	1
+				}],
+			"LegacyPath":	false,
+			"LoadEntities":	true,
+			"MoldingDirection":	"NONE",
+			"MoldingChildren":	false
+		},
+		"Rotations":	[]
+	},
+	"$NodeEditorMetadata":	{
+		"$Nodes":	{
+			"Constant.Assignments-05d90f87-b3f6-4ecd-86ca-9f3141a0d599":	{
+				"$Position":	{
+					"$x":	136,
+					"$y":	-3432
+				},
+				"$Title":	"[ROOT] Constant Assignments"
+			},
+			"RandomRotator.Prop-8f368dd5-69ea-4755-a153-4a54fc745856":	{
+				"$Position":	{
+					"$x":	758,
+					"$y":	-3431
+				}
+			},
+			"Prefab.Prop-5aac5fb5-68aa-4f83-8f92-74745c394e2b":	{
+				"$Position":	{
+					"$x":	1415,
+					"$y":	-3429
+				}
+			},
+			"WeightedPath.Prefab.Prop-d94c9838-61fa-485a-b898-998f92b22491":	{
+				"$Position":	{
+					"$x":	2217,
+					"$y":	-3428
+				}
+			}
+		},
+		"$FloatingNodes":	[],
+		"$Links":	{
+		},
+		"$Groups":	[],
+		"$Comments":	[],
+		"$WorkspaceID":	"HytaleGenerator - Assignments"
+	}
+}

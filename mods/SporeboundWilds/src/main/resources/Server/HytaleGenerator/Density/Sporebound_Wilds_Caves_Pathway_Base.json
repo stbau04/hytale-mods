@@ -1,0 +1,175 @@
+{
+	"$NodeId":	"MultiplierDensityNode-f8373097-86dc-4ce7-94aa-c45a40776227",
+	"Type":	"Multiplier",
+	"ExportAs":	"Sporebound_Wilds_Caves_Pathway_Base",
+	"Skip":	false,
+	"Inputs":	[{
+			"$NodeId":	"Cache.Density-39ca91ec-d1df-483d-84b7-e27e97d0ea31",
+			"Type":	"Cache",
+			"ExportAs":	"Sample_1",
+			"Skip":	false,
+			"Capacity":	3,
+			"Inputs":	[{
+					"$NodeId":	"CurveMapper.Density-54915a5a-1dd9-498a-891a-d1a11c74f73a",
+					"Type":	"CurveMapper",
+					"Skip":	false,
+					"Curve":	{
+						"$NodeId":	"ManualCurve-6d399f87-3311-4eae-b57c-f6ae2aa36402",
+						"Type":	"Manual",
+						"Points":	[{
+								"$NodeId":	"CurvePoint-be58431e-e94b-47fb-8590-ff7c4f44fe00",
+								"In":	-1,
+								"Out":	-1
+							}, {
+								"$NodeId":	"CurvePoint-fe4198b6-05ff-491f-a0c5-2ed2747a4a89",
+								"In":	-0.01,
+								"Out":	0
+							}, {
+								"$NodeId":	"CurvePoint-359e56d0-e6ab-43b3-8efd-626555cedbb1",
+								"In":	0,
+								"Out":	1
+							}, {
+								"$NodeId":	"CurvePoint-19b49a39-c4c9-490e-a468-3d8fd7d41f39",
+								"In":	0.01,
+								"Out":	0
+							}, {
+								"$NodeId":	"CurvePoint-d3e8b754-9f58-401f-9426-22c64d7c061c",
+								"In":	1,
+								"Out":	-1
+							}]
+					},
+					"Inputs":	[{
+							"$NodeId":	"SumDensityNode-fe889ed4-9bf5-4f8d-80d1-4aa0dab8cdc8",
+							"Type":	"Sum",
+							"Skip":	false,
+							"Inputs":	[{
+									"$NodeId":	"Slider.Density-c8e574bc-c033-4416-9db6-cfc78c54a117",
+									"Type":	"Slider",
+									"Skip":	false,
+									"SlideX":	1,
+									"SlideY":	0,
+									"SlideZ":	1,
+									"Inputs":	[{
+											"$NodeId":	"SimplexNoise2DDensityNode-03d3f1df-d9e1-4353-8441-65c0715b613e",
+											"Type":	"SimplexNoise2D",
+											"Skip":	false,
+											"Lacunarity":	3,
+											"Persistence":	0.1,
+											"Octaves":	1,
+											"Scale":	200,
+											"Seed":	"Sporebound_Wilds_Caves_Pathway_Base"
+										}]
+								}, {
+									"$NodeId":	"InverterDensityNode-69e3dfa3-c845-4787-9e3f-9eee8137b3d1",
+									"Type":	"Inverter",
+									"Skip":	false,
+									"Inputs":	[{
+											"$NodeId":	"SimplexNoise2DDensityNode-b7fad51b-a593-409a-b3e4-d9fdaa43f057",
+											"Type":	"SimplexNoise2D",
+											"Skip":	false,
+											"Lacunarity":	3,
+											"Persistence":	0.1,
+											"Octaves":	1,
+											"Scale":	200,
+											"Seed":	"Sporebound_Wilds_Caves_Pathway_Base"
+										}]
+								}]
+						}]
+				}]
+		}],
+	"$NodeEditorMetadata":	{
+		"$Nodes":	{
+			"MultiplierDensityNode-f8373097-86dc-4ce7-94aa-c45a40776227":	{
+				"$Position":	{
+					"$x":	2003,
+					"$y":	779
+				},
+				"$Title":	"[ROOT] Multiplier Density"
+			},
+			"Cache.Density-39ca91ec-d1df-483d-84b7-e27e97d0ea31":	{
+				"$Position":	{
+					"$x":	2710,
+					"$y":	776
+				}
+			},
+			"CurveMapper.Density-54915a5a-1dd9-498a-891a-d1a11c74f73a":	{
+				"$Position":	{
+					"$x":	3526,
+					"$y":	770
+				}
+			},
+			"ManualCurve-6d399f87-3311-4eae-b57c-f6ae2aa36402":	{
+				"$Position":	{
+					"$x":	4279,
+					"$y":	942
+				}
+			},
+			"CurvePoint-be58431e-e94b-47fb-8590-ff7c4f44fe00":	{
+				"$Position":	{
+					"$x":	4962,
+					"$y":	968
+				}
+			},
+			"CurvePoint-fe4198b6-05ff-491f-a0c5-2ed2747a4a89":	{
+				"$Position":	{
+					"$x":	4957,
+					"$y":	1139
+				}
+			},
+			"CurvePoint-359e56d0-e6ab-43b3-8efd-626555cedbb1":	{
+				"$Position":	{
+					"$x":	4956,
+					"$y":	1315
+				}
+			},
+			"CurvePoint-19b49a39-c4c9-490e-a468-3d8fd7d41f39":	{
+				"$Position":	{
+					"$x":	4951,
+					"$y":	1502
+				}
+			},
+			"CurvePoint-d3e8b754-9f58-401f-9426-22c64d7c061c":	{
+				"$Position":	{
+					"$x":	4945,
+					"$y":	1676
+				}
+			},
+			"SumDensityNode-fe889ed4-9bf5-4f8d-80d1-4aa0dab8cdc8":	{
+				"$Position":	{
+					"$x":	4236,
+					"$y":	636
+				}
+			},
+			"Slider.Density-c8e574bc-c033-4416-9db6-cfc78c54a117":	{
+				"$Position":	{
+					"$x":	4965,
+					"$y":	382
+				}
+			},
+			"SimplexNoise2DDensityNode-03d3f1df-d9e1-4353-8441-65c0715b613e":	{
+				"$Position":	{
+					"$x":	5654,
+					"$y":	384
+				}
+			},
+			"InverterDensityNode-69e3dfa3-c845-4787-9e3f-9eee8137b3d1":	{
+				"$Position":	{
+					"$x":	4965,
+					"$y":	732
+				}
+			},
+			"SimplexNoise2DDensityNode-b7fad51b-a593-409a-b3e4-d9fdaa43f057":	{
+				"$Position":	{
+					"$x":	5654,
+					"$y":	727
+				}
+			}
+		},
+		"$FloatingNodes":	[],
+		"$Links":	{
+		},
+		"$Groups":	[],
+		"$Comments":	[],
+		"$WorkspaceID":	"HytaleGenerator - Density"
+	}
+}

@@ -1,20 +1,18 @@
 {
     "Group": "HyMods",
     "Name": "Sporebound Wilds",
-    "Version": "0.0.0",
+    "Version": "0.0.0-rc.0",
     "Description": "Does this mushroom look kinda weird?",
     "Authors": [
         {
             "Name": "Stephan Bauer",
-            "Email": "st.bauer04@gmail.com",
-            "Url": "https://hymods.org"
+            "Email": "st.bauer04@gmail.com"
         }
     ],
-    "Website": "https://hymods.org",
     "DisabledByDefault": false,
     "IncludesAssetPack": false,
     "Dependencies": {},
     "OptionalDependencies": {},
-    "ServerVersion": "*",
+    "ServerVersion": "2026.04.17-c2d518cc9",
     "Main": "org.hymods.SporeboundWildsPlugin"
 }

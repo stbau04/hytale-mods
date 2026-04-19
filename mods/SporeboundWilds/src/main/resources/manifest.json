@@ -1,7 +1,7 @@
 {
     "Group": "HyMods",
     "Name": "Sporebound Wilds",
-    "Version": "0.0.0-rc.1",
+    "Version": "0.0.0-preview.1",
     "Description": "Does this mushroom look kinda weird?",
     "Authors": [
         {
@@ -10,7 +10,7 @@
         }
     ],
     "DisabledByDefault": false,
-    "IncludesAssetPack": false,
+    "IncludesAssetPack": true,
     "Dependencies": {},
     "OptionalDependencies": {},
     "ServerVersion": "2026.04.17-c2d518cc9",
